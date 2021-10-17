@@ -1,0 +1,65 @@
+// Background
+.bg{
+    background-position: var(--bg-position, center);
+    background-size: var(--bg-size, cover);
+
+    @each $name, $color in (
+        "gradient-primary" "#{$gradient-primary}", 
+        "primary" "#{$base-primary}", 
+        "primary-light" "#{$base-primary-light}", 
+        "primary-a5" "#{$base-primary-a5}", 
+        "primary-a10" "#{$base-primary-a10}", 
+        "light" "#{$base-gray-100}", 
+        "danger" "#{$base-danger}", 
+        "danger-a5" "#{$base-danger-a5}", 
+        "danger-a10" "#{$base-danger-a10}",
+        "warning" "#{$base-warning}", 
+        "warning-a5" "#{$base-warning-a5}", 
+        "warning-a10" "#{$base-warning-a10}",
+        "success" "#{$base-success}", 
+        "success-a5" "#{$base-success-a5}", 
+        "success-a10" "#{$base-success-a10}",
+    ) {
+        &-#{$name}{
+            background: var(--bg-color, #{$color}) !important;
+        }        
+    }
+}
+
+
+// Colors
+.text{
+    @each $name, $color in (
+        "primary" "#{$base-primary}", 
+        "primary-light" "#{$base-primary-light}", 
+        "inverted" "#{$base-white}", 
+        "light" "#{$base-gray-100}", 
+        "muted" "#{$base-gray-500}", 
+        "danger" "#{$base-danger}", 
+        "warning" "#{$base-warning}", 
+        "success" "#{$base-success}", 
+    ) {
+        &-#{$name}{
+            color: var(--text-color, #{$color}) !important;
+        }        
+    }
+
+    // @each $transform in (uppercase, capitalize, lowercase) {
+    //     &-#{$transform} {
+    //       text-transform: var(--text-transform, #{$transform}) !important;
+    //     }
+    // }
+      
+    // // Text ALign
+    // @each $breakpoint in map-keys($grid-breakpoints) {
+    //     @include media-breakpoint-up($breakpoint) {
+    //     $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+        
+    //         @each $name, $align in ("start" "left", "center" "center", "end" "right") {
+    //             &#{$infix}-#{$name}{
+    //                 text-align: var(--text#{$infix}-align, #{$align}) !important;
+    //             }
+    //         }
+    //     }
+    // }
+}

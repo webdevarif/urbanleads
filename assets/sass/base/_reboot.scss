@@ -1,0 +1,407 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  --container-xxl: 1370px;
+  margin: 0;
+  font-size: var(--body-fs, $fs-md);
+  font-family: var(--body-ff, $ff-body);
+  background-color: var(--base-darker);
+  background-image: var(--gradient-dark);
+  color: var(--body-color, $base-gray-600);
+  font-weight: normal;
+  line-height: 1.6;
+  box-sizing: border-box;
+}
+
+svg,
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a,
+svg,
+img,
+.btn,
+.button {
+  -webkit-transition: $transition-base;
+  -moz-transition: $transition-base;
+  -o-transition: $transition-base;
+  transition: $transition-base;
+}
+
+a:focus,
+.btn:focus,
+.button:focus {
+  text-decoration: none;
+  outline: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -o-box-shadow: none;
+  box-shadow: none;
+}
+
+a:hover {
+  color: var(--link-hover, $link-hover);
+  text-decoration: none;
+}
+
+a,
+button {
+  color: var(--link-color, $link-color);
+  outline: medium none;
+}
+
+button:focus,
+input:focus,
+input:focus,
+textarea,
+textarea:focus {
+  outline: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--heading-color, $base-gray-800);
+  font-family: var(--heading-ff, $ff-body);
+  font-weight: var(--heading-fw, bold);
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  margin-top: 0;
+  margin-bottom: var(--heading-mb, $su-3);
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: inherit;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  color: var(--heading-color, $base-gray-800);
+}
+
+.h1,
+h1 {
+  font-size: var(--fs-h1, $fs-5xl);
+  line-height: 1.4;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.h2,
+h2 {
+  font-size: var(--fs-h2, $fs-4xl);
+  line-height: 1.3;
+}
+
+.h3,
+h3 {
+  font-size: var(--fs-h3, $fs-3xl);
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.h4,
+h4 {
+  font-size: var(--fs-h4, $fs-2xl);
+}
+
+.h5,
+h5 {
+  font-size: var(--fs-h5, $fs-lg);
+}
+
+.h6,
+h6 {
+  font-size: var(--fs-h6, $fs-md);
+  line-height: 1.5;
+}
+
+p {
+  font-size: var(--body-fs, $fs-md);
+  font-weight: normal;
+  line-height: 1.7;
+  color: var(--body-color, $base-gray-700);
+  letter-spacing: 0px;
+  margin-top: 0;
+  margin-bottom: var(--paragraph-mb, $su-3);
+}
+
+
+hr {
+  border-bottom: 1px solid var(--hr-border-color, $border-color);
+  border-top: 0 none;
+  margin: var(--hr-height, 30px) 0;
+  padding: 0;
+}
+
+.hr{
+  @each $name, $height in ("sm" "20px", "lg" "40px", "xl" "50px") {
+    &-#{$name} {
+      --hr-height: #{$height};
+    }
+  }
+
+  @each $name, $color in ("light" "#{$base-white-a10}", "dark" "#{$base-black-a10}"){
+    &-#{$name} {
+      --hr-border-color: #{$color};
+    }
+  }
+}
+
+*::-moz-selection {
+  background: $base-warning-a10;
+  color: $base-warning;
+  text-shadow: none;
+}
+
+::-moz-selection {
+  background: $base-warning-a10;
+  color: $base-warning;
+  text-shadow: none;
+}
+
+::selection {
+  background: $base-warning-a10;
+  color: $base-warning;
+  text-shadow: none;
+}
+
+*::-webkit-input-placeholder {
+  color: var(--placeholder-color, $base-gray-600);
+  font-size: 80%;
+  opacity: 1;
+}
+
+*:-ms-input-placeholder {
+  color: var(--placeholder-color, $base-gray-600);
+  font-size: 80%;
+  opacity: 1;
+}
+
+*::-ms-input-placeholder {
+  color: var(--placeholder-color, $base-gray-600);
+  font-size: 80%;
+  opacity: 1;
+}
+
+*::placeholder {
+  color: var(--placeholder-color, $base-gray-600);
+  font-size: 80%;
+  opacity: 1;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: $base-white-a10;
+  border-radius: var(--radius-md);
+}
+
+*::-webkit-scrollbar {
+  width: 0.5rem;
+  border-radius: var(--radius-md);
+  background-color: $base-white-a10;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbarColor, $base-primary);
+  border-radius: $radius-sm;
+  border: 1px solid $base-white-a30;
+}
+
+
+
+// Line Height
+@for $height from 1 to 20 {
+  .lh-#{$height} {
+    line-height: var(--line-height, calc( #{$height} / 10 ));
+  }
+}
+
+// Font Sizes
+@each $fontSize in (sm, md, lg, xl, 2xl, 3xl, 4xl, 5xl, 6xl) {
+  .fs-#{$fontSize} {
+    font-size: var(--font-#{$fontSize}-size, var(--fs-#{$fontSize}));
+  }
+}
+
+// Font Weight
+@each $weight in (light, regular, medium, bold, 100, 200, 300, 400, 500, 600, 700, 800){
+  .fw-#{$weight} {
+    font-weight: var(--font-weight, #{$weight});
+  }
+}
+
+// Overlay
+[data-overlay]{
+    position: var(--overlay-att-position, relative);
+
+    &:before{
+        position: var(--overlay-position, absolute);
+        content: "";
+        background: var(--overlay-bg, #{$base-100});
+        width: 100%;
+        height: 100%;
+        top: 0; left: 0;
+        z-index: var(--overlay-zIndex, #{$z-negative});
+    }
+}
+// Overlay ALpha
+@for $alpha from 0 to 11 {
+    [data-overlay="#{$alpha}"]:before{
+        opacity: var(--overlay-opacity, calc(#{$alpha} / 10));
+    }
+}
+
+// Overlay Background
+@each $name, $color in (
+    "gradient-primary": "#{$gradient-primary}",
+    "success": "#{$base-success}",
+    "danger": "#{$base-danger}",
+) {
+    [data-overlay-bg="#{$name}"]:before{
+        --overlay-bg: #{$color} !important;
+    }    
+}
+
+
+// Spacing
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    @each $var in (50, 70, 100, 120, 150) {
+      // Padding
+      .py#{$infix}-#{$var},
+      .pt#{$infix}-#{$var}{
+        padding-top: var(--padding-top, #{$var}px) !important;
+      }
+      .py#{$infix}-#{$var},
+      .pb#{$infix}-#{$var}{
+        padding-bottom: var(--padding-bottom, #{$var}px) !important;;
+      }
+      // Margin
+      .my#{$infix}-#{$var},
+      .mt#{$infix}-#{$var}{
+        margin-top: var(--margin-top, #{$var}px) !important;
+      }
+      .my#{$infix}-#{$var},
+      .mb#{$infix}-#{$var}{
+        margin-bottom: var(--margin-bottom, #{$var}px) !important;
+      }
+    }
+  }
+}
+
+// Height
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+    
+    @each $var in (50, 100) {
+      // Padding
+      .min-vh#{$infix}-#{$var}{
+        min-height: var(--min-#{$infix}-height, #{$var}vh) !important;
+      }
+      .vh#{$infix}-#{$var}{
+        height: var(--h-#{$infix}-height, #{$var}vh) !important;;
+      }
+      .min-h#{$infix}-#{$var}{
+        min-height: var(--min-#{$infix}-height, calc(#{$var} * 1%)) !important;
+      }
+      .h#{$infix}-#{$var}{
+        height: var(--h-#{$infix}-height, calc(#{$var} * 1%)) !important;;
+      }
+    }
+  }
+}
+
+
+// Label
+label{
+  font-weight: var(--label-font-weight, 600);
+  margin-bottom: var(--label-mb, $su-2);
+  color: var(--label-color, $base-gray-700);
+}
+@each $name, $color in ("light" "#{$base-gray-100}", "dark" "#{$base-gray-dark}") {
+  .label-#{$name}{
+    --label-color: #{$color};
+  } 
+}
+
+// Form Control
+.form-control{
+  border-radius: var(--border-radius, $radius-0);
+}
+
+.main-wrapper{
+  overflow: hidden;
+}
+
+
+.btn{
+  border-radius: var(--btn-radius, $radius-0);
+  
+  @each $name, $bg, $color in (
+    "primary" $base-primary $base-inverted,
+    "success" $base-success $base-inverted,
+  ) {
+    &-#{$name}{
+      background-color: $bg;
+      border-color: $bg;
+      color: $color;
+
+      &:hover, &:active, &:focus{
+        $hover-bg: darken($bg, 6%);
+        background-color: $hover-bg;
+        border-color: $hover-bg;
+        color: $color;
+      }
+      &:active:focus{
+        box-shadow: none;
+      }
+    }    
+  }
+}
+
+// Title
+.title-6xl{
+  font-size: var(--title-6xl-size, $fs-5xl);
+
+  @include media-breakpoint-up(xxl) {
+    --title-6xl-size: #{$fs-6xl};
+  }
+}

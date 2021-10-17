@@ -1,0 +1,184 @@
+$base-blue: #0d6efd;
+$base-indigo: #6610f2;
+$base-purple: #6f42c1;
+$base-pink: #d63384;
+$base-red: #dc3545;
+$base-orange: #fd7e14;
+$base-yellow: #ffc107;
+$base-green: #198754;
+$base-teal: #20c997;
+$base-cyan: #0dcaf0;
+$base-white: #fff;
+$base-black: #000;
+
+$base-gray: #6c757d;
+$base-gray-dark: #14213D;
+$base-gray-100: #f8f9fa;
+$base-gray-200: #e9ecef;
+$base-gray-300: #dee2e6;
+$base-gray-400: #ced4da;
+$base-gray-500: #adb5bd;
+$base-gray-600: #6c757d;
+$base-gray-700: #495057;
+$base-gray-800: #343a40;
+$base-gray-900: #212529;
+
+$base-primary: #266C88;
+$base-primary-light: #2D87A2;
+$base-primary-a5: rgba($base-primary, 0.1);
+$base-primary-a10: rgba($base-primary, 0.2);
+$base-danger: $base-red;
+$base-danger-a5: rgba($base-red, 0.1);
+$base-danger-a10: rgba($base-red, 0.2);
+$base-success: $base-green;
+$base-success-a5: rgba($base-green, 0.1);
+$base-success-a10: rgba($base-green, 0.2);
+$base-warning: $base-yellow;
+$base-warning-a5: rgba($base-yellow, 0.1);
+$base-warning-a10: rgba($base-yellow, 0.2);
+
+//Gray Base Colors
+$base-dark: $base-gray-900;
+$base-inverted: $base-white;
+$base-10: $base-gray-100;
+$base-20: $base-gray-200;
+$base-30: $base-gray-300;
+$base-40: $base-gray-400;
+$base-50: $base-gray-500;
+$base-60: $base-gray-600;
+$base-70: $base-gray-700;
+$base-80: $base-gray-800;
+$base-90: $base-gray-900;
+$base-100: $base-gray-dark;
+
+//Black Alpha Colors
+$base-black-a5: rgba($base-black, 0.05);
+$base-black-a10: rgba($base-black, 0.1);
+$base-black-a15: rgba($base-black, 0.15);
+$base-black-a20: rgba($base-black, 0.2);
+$base-black-a30: rgba($base-black, 0.3);
+$base-black-a40: rgba($base-black, 0.4);
+$base-black-a50: rgba($base-black, 0.5);
+$base-black-a60: rgba($base-black, 0.6);
+$base-black-a80: rgba($base-black, 0.8);
+
+//White Alpha Colors
+$base-white-a5: rgba($base-white, 0.05);
+$base-white-a10: rgba($base-white, 0.1);
+$base-white-a20: rgba($base-white, 0.2);
+$base-white-a30: rgba($base-white, 0.3);
+$base-white-a40: rgba($base-white, 0.4);
+$base-white-a50: rgba($base-white, 0.5);
+$base-white-a60: rgba($base-white, 0.6);
+$base-white-a80: rgba($base-white, 0.8);
+$base-white-a90: rgba($base-white, 0.8);
+
+//Font Sizes
+$fs-xs: 0.75rem;
+$fs-sm: 0.875rem;
+$fs-md: 1rem;
+$fs-lg: 1.125rem;
+$fs-xl: 1.25rem;
+$fs-2xl: 1.5rem;
+$fs-3xl: 1.875rem;
+$fs-4xl: 2.25rem;
+$fs-5xl: 3rem;
+$fs-6xl: 4.5rem;
+
+// Gap Spacing
+$su-1: 0.25rem;
+$su-2: 0.5rem;
+$su-3: 0.75rem;
+$su-4: 1rem;
+$su-5: 1.25rem;
+$su-6: 1.5rem;
+$su-7: 2rem;
+$su-8: 3rem;
+$su-9: 8rem;
+$su-10: 10rem;
+
+// Border Radius
+$radius-0: 0rem;
+$radius-xs: 0.25rem;
+$radius-sm: 0.5rem;
+$radius-md: 1rem;
+$radius-lg: 2.25rem;
+$radius-xl: 5rem;
+$radius-pill: 50em;
+$radius-circle: 50%;
+
+$z-negative: -1;
+$z-elevate: 1;
+$z-sticky: 100;
+$z-drawer: 200;
+$z-modal: 300;
+$z-dropdown: 400;
+$z-popover: 500;
+$z-header: 98;
+$z-overlay: 998;
+$z-sidebar: 999;
+
+// Link
+$link-color: $base-gray-800;
+$link-hover: $base-gray-600;
+
+// Font Family
+$ff-body : "Alte Haas Grotesk";
+
+$base-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$base-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+
+// Box Shadow
+$shadow-xs: rgba($base-black, 0.05) 0px 6px 24px 0px, rgba($base-black, 0.08) 0px 0px 0px 1px;
+$shadow-sm: rgba($base-black, 0.16) 0px 1px 4px;
+$shadow-md: rgba($base-black, 0.2) 0px 2px 8px 0px;
+$shadow-lg: rgba($base-100, 0.2) 0px 7px 29px 0px;
+$shadow-xl: rgba($base-black, 0.35) 0px 5px 15px;
+$shadow-xxl: rgba($base-black, 0.16) 0px 10px 36px 0px, rgba($base-black, 0.06) 0px 0px 0px 1px;
+
+// Gradient Colors
+$gradient-primary: transparent linear-gradient(240deg, $base-primary-light 0%, $base-gray-dark 100%) 0% 0% no-repeat padding-box;
+
+
+// Border
+$border-color: $base-50;
+
+// Transition
+$transition-base: all .2s ease-in-out !default;
+$transition-fade: opacity .15s linear !default;
+
+// scss-docs-start grid-breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+) !default;
+// scss-docs-end grid-breakpoints
+
+
+
+:root{
+    --fs-xs: 0.75rem;
+    --fs-sm: 0.875rem;
+    --fs-md: 1rem;
+    --fs-lg: 1.125rem;
+    --fs-xl: 1.25rem;
+    --fs-2xl: 1.5rem;
+    --fs-3xl: 1.875rem;
+    --fs-4xl: 2.25rem;
+    --fs-5xl: 3rem;
+    --fs-6xl: 5rem;
+    
+    --radius-0: 0rem;
+    --radius-xs: 0.25rem;
+    --radius-sm: 0.5rem;
+    --radius-md: 1rem;
+    --radius-lg: 2.25rem;
+    --radius-xl: 5rem;
+    --radius-pill: 50em;
+    --radius-circle: 50%;    
+    }
