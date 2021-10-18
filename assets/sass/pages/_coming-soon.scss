@@ -1,30 +1,31 @@
-.page-coming-soon{
-    &:before{
-        mix-blend-mode: multiply;
-    }  
-    .page-dotted{
-        position: var(--page-dotted-position, absolute);
-        right: var(--page-dotted-right, 10%);
-        bottom: var(--page-dotted-bottom, -18%);
-        opacity: var(--page-dotted-opacity, 1);
-        mix-blend-mode: screen;
-        max-width: var(--page-dotted-max-width, 850px);
-    
-        @include media-breakpoint-up(xxl) {
-            --page-dotted-right: 20%;
-        }
-        @include media-breakpoint-between(xl, xxl) {
-            --page-dotted-right: 14%;
-        }
-        @include media-breakpoint-down(xl) {
-            --page-dotted-bottom: auto;
-            --page-dotted-right: auto;
-            --page-dotted-max-width: 530px;
-            top: -18%;
-            left: 9%;
-        }
+.page-coming-soon:before{
+    mix-blend-mode: multiply;
+}
+
+.page-coming-soon .page-dotted{
+    position: var(--page-dotted-position, absolute);
+    right: var(--page-dotted-right, 10%);
+    bottom: var(--page-dotted-bottom, -18%);
+    opacity: var(--page-dotted-opacity, 1);
+    mix-blend-mode: screen;
+    max-width: var(--page-dotted-max-width, 850px);
+    z-index: -1;
+
+    @include media-breakpoint-up(xxl) {
+        --page-dotted-right: 20%;
+    }
+    @include media-breakpoint-between(xl, xxl) {
+        --page-dotted-right: 14%;
+    }
+    @include media-breakpoint-down(xl) {
+        --page-dotted-bottom: auto;
+        --page-dotted-right: auto;
+        --page-dotted-max-width: 530px;
+        top: -18%;
+        left: 9%;
     }
 }
+
 @include media-breakpoint-down(xl) {
     .coming-soon-img img{
         max-width: 130px;    

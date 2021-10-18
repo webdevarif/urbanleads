@@ -1322,6 +1322,7 @@ label {
   opacity: var(--page-dotted-opacity, 1);
   mix-blend-mode: screen;
   max-width: var(--page-dotted-max-width, 850px);
+  z-index: -1;
 }
 
 @media (min-width: 1400px) {
